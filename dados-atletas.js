@@ -7,7 +7,6 @@ class Atleta {
     this.notas = notas;
   }
 
-  // Método para calcular a categoria do atleta
   calculaCategoria() {
     if (this.idade >= 9 && this.idade <= 11) {
       return "Infantil";
@@ -22,14 +21,15 @@ class Atleta {
     }
   }
 
-  // Método para calcular o IMC do atleta
   calculaIMC() {
     return this.peso / (this.altura * this.altura);
   }
 
-  // Método para calcular a média válida do atleta
   calculaMediaValida() {
     let media = 0
+    this.notas = this.notas.sort()
+    this.notas.shift()
+    this.notas.pop()
       this.notas.map(function(nota){
       return media = media + nota
     })
@@ -37,14 +37,13 @@ class Atleta {
     return media / this.notas.length
   }
 
-  // Métodos para obter os atributos do atleta
   obtemNomeAtleta() {
     return this.nome;
   }
 
   obtemIdadeAtleta() {
     return this.idade;
-  }
+  }''
 
   obtemPesoAtleta() {
     return this.peso;
