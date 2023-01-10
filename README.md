@@ -30,6 +30,9 @@ class Atleta {
   // Método para calcular a média válida do atleta
   calculaMediaValida() {
     let media = 0
+    this.notas = this.notas.sort()
+    this.notas.shift()
+    this.notas.pop()
       this.notas.map(function(nota){
       return media = media + nota
     })
@@ -44,7 +47,7 @@ class Atleta {
 
   obtemIdadeAtleta() {
     return this.idade;
-  }
+  }''
 
   obtemPesoAtleta() {
     return this.peso;
