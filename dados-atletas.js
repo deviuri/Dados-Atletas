@@ -27,7 +27,7 @@ class Atleta {
 
   calculaMediaValida() {
     let media = 0
-    this.notas = this.notas.sort()
+    this.notas.sort()
     this.notas.shift()
     this.notas.pop()
       this.notas.map(function(nota){
